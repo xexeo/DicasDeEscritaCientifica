@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[openany]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazilian]{babel}
 \usepackage[editing]{coop-writing}
@@ -7,6 +7,7 @@ natbib]{biblatex}
 \usepackage{graphicx} % includegraphics
 \usepackage{csquotes} %enquote, textquote...
 \usepackage{enumitem} % noitemsep, nolistsep
+\usepackage{indentfirst }
 \setlist[itemize]{noitemsep}
 \setlist[itemize]{nolistsep}
 \setlist[enumerate]{noitemsep}
@@ -16,17 +17,24 @@ natbib]{biblatex}
 \addbibresource{ec.bib}
 \cwnamedef{xexeo}{red}{Xexéo}
 \setlength{\parskip}{0.5em}
+\setlength{\cftsubjectnumwidth}{20pt}
+\setlength{\cftcomentarionumwidth}{20pt}
+\setlength{\cftcomentariorefnumwidth}{20pt}
 \title{Dicas de Escrita de Artigos Científicos}
 \author{Geraldo Xexéo}
 \date{Junho de 2021}
 
 \begin{document}
 
+\frontmatter
+
 \maketitle
 
 \tableofcontents
 
-\section{Introdução}
+\mainmatter
+
+\chapter{Introdução}
 \cwmain{Este texto apresenta dicas de escrita de artigos científicos, em especial para Computação, com foco em brasileiros que tem que escrever em inglês.} Essas dicas foram coletadas a partir da leitura de vários livros, artigos e sites que serão indicados ao longo do texto.
 
 O fato de eu escrever este documento não significa que eu escreva bem, mas que eu me esforço para isso e que, com o tempo, adquiri um conhecimento que me permite, principalmente, criticar o meu próprio trabalho e o dos outros como revisor.
@@ -45,6 +53,8 @@ As dicas aqui colocadas tem esse objetivo específico e, em geral, não são per
 
 \cwmain{Para diminuir a dificuldade de escrever em inglês é \textbf{importante ler em inglês}.} Isso trará justamente o conhecimento da ortografia, da gramática e do estilo adequado. Se o escritor não lê na língua que escreve, não tem uma base de exemplos suficiente para poder criar o seu texto.
 
+
+\chapter{Estilo}
 
 \section{O que é estilo de escrita?}
 
@@ -78,12 +88,12 @@ Bons autores tem estilo próprio que quebram algumas regras, ou mesmo todas, por
     \item evitar jargões, principalmente de outras áreas que não a tratada no artigo.
 \end{itemize}
 
- \cwmain{Eu gosto da ideia de usar listas explícitas.}
+ \cwmain{Eu gosto, por exemplo, da ideia de usar listas explícitas.}
  É um estilo pessoal, e não é um inglês muito rico, porém elas facilitam a visualização de ideias e exemplos, sendo muito melhores para isso do que colocar dois pontos e seguir com uma lista de itens separados por vírgulas.
 
- \cwmain{Essas listas podem ser transformadas facilmente em parágrafos ou incluídas dentro de um texto, seguindo o dois pontos.} Por exemplo, se cada item da lista precisar de uma explicação, é possível transformá-los em parágrafos distinto, com palavras de ligação entre os parágrafos como ``First'', e ``Second''. O segundo caso pode ser necessário se falta espaço no artigo.
+  \cwmain{Essas listas podem ser transformadas facilmente em parágrafos ou incluídas dentro de um texto, seguindo o dois pontos.} Por exemplo, se cada item da lista precisar de uma explicação, é possível transformá-los em parágrafos distinto, com palavras de ligação entre os parágrafos como ``First'', e ``Second''. O segundo caso pode ser necessário se falta espaço no artigo.
 
-\subsection{A distância entre o que escrevemos e o que é compreendido}
+\section{A distância entre o que escrevemos e o que é compreendido}
 
 \cwmain{Existe uma distância muito grande entre o que pensamos e o que vai entender o leitor de nosso texto.} Essa distância pode levar a compreensão errada de nossas ideias.
 
@@ -93,7 +103,9 @@ Bons autores tem estilo próprio que quebram algumas regras, ou mesmo todas, por
 Ela permite duas interpretações: eu estava usando um binóculo, ou o homem portava um binóculo. Ela pode ser reescrita de outras formas para evitar essa ambiguidade, por exemplo: \enquote{De binóculo, vi um homem}, \enquote{Eu usava um binóculo quando vi um homem a distância}. Todas essas frases estão corretas, mas a original é totalmente ambígua\footnote{A amiguidade, nesse caso, é gramatical, já que duas estruturas gramaticais podem ser construídas}, não nos permite afirmar, com certeza, se quem estava de binóculo era eu, ou o homem. A segunda, dependendo de onde é usada, poderia ainda dizer que quem estava usando o binóculo era o homem, por exemplo se respondendo a questão ``Você viu alguém com binóculo ou chapéu?''.
 Na terceira tudo está mais claro e é difícil escolher um contexto onde não represente exatamente o fato de que eu estava de binóculo e não o homem.
 
-\cwmain{A Figura \protect\ref{fig:tr1} mostra a distância entre o que pensamos e o que o leitor vai interpretar}.
+% need to protect references in a box to allow
+% highlighting
+\cwmain{A Figura {\ref{fig:tr1}} mostra a distância entre o que pensamos e o que o leitor vai interpretar}.
 
 \begin{figure}
     \centering
@@ -102,11 +114,13 @@ Na terceira tudo está mais claro e é difícil escolher um contexto onde não r
     \label{fig:tr1}
 \end{figure}
 
-\section{O Problema de Múltiplos Autores}
+\section{O problema de múltiplos autores}
 
 \cwmain{Em um artigo de vários autores, eles devem se organizar em torno de um estilo único.} Uma das dificuldades de escrever artigos em co-autoria é normalmente a mistura de estilos. Escolhendo, ou mesmo se submetendo a um estilo único, os autores evitam que o leitor tenha a sensação de estar lendo uma colagem ou colcha de retalhos.
 
-\section{O Objetivo do Texto Científico}
+\chapter{O Texto Científico}
+
+\section{O objetivo do texto científico}
 
 \cwmain{O objetivo do texto científico é passar uma ideia complexa de forma compreensível para uma audiência internacional, onde a maioria sabe o inglês como segunda língua}. Essa ideia deve adicionar algo ao corpo de conhecimento de uma área de pesquisa.
 
@@ -132,7 +146,7 @@ Para isso precisamos atingir algumas qualidades:
 \cwmain{ A audiência de um artigo possui um conhecimento específico que não devemos replicar no artigo.} Esse \textit{background}, permite tratar de assuntos sem que tenhamos de reconstruir a história da área, o que é desnecessário e torna o artigo aborrecido.
 
 
-\section{Seja Forte no Início}
+\chapter{Inícios Devem Ser Fortes}
 
 \cwmain{Devido a uma ideia errônea que a introdução deve partir de algo muito geral, muitos autores começam seu artigo com um texto que não traz nenhuma informação nova}, logo não atiça a curiosidade do leitor, nem o prepara para o que está por vir.
 
@@ -143,7 +157,7 @@ be your best sentence. If a paper starts badly, the reader will wince and be res
 a difficult job of fighting with your prose. Conversely, if the beginning flows smoothly,
 the reader will be hooked and won’t notice occasional lapses in the later parts.}
 
-\cwmain{Apoiado neste texto de \protect\citet{Knuth:1997}, eu acredito que o melhor primeiro parágrafo diz o que o texto apresenta.} Por exemplo, este é um primeiro parágrafo de um artigo que estou escrevendo:
+\cwmain{Eu acredito que o melhor primeiro parágrafo diz o que o texto apresenta.} Por exemplo, este é um primeiro parágrafo de um artigo que estou escrevendo:
 
 \textquote{This article defends that heroic journeys are an effective way to help female students to overcome barriers in STEM education.
 It also shows how to build courses based on heroic journeys, taking into account motivational theories, self-regulation of learning, and project based learning. Finally, it describes the Heroine's Learning  Journey and a framework that  supports its use in the development of online courses.}\xexeo{defends ainda é meio fraco, mas por enquanto é a versão mais forte que conseguimos.}
@@ -164,21 +178,23 @@ A menos de questões da revista em que vai ser publicado, eu começaria o segund
 
 Como esse é um texto pessoal, eu aceito que alguns autores, ou mesmo a maioria deles use uma abordagem \textit{top-down} em sua introdução para abordar o seu problema, porém eu prefiro dizer, e saber quando estou lendo, para que veio o artigo. Sinceramente, eu normalmente pulo os textos introdutórios que seguem o padrão do terceiro parágrafo mostrado.
 
-\subsection{Primeiro Parágrafo da Seção}
+\section{O primeiro parágrafo da seção}
 
-Essa ideia também se aplica ao primeiro parágrafo de uma seção. A seguir mostro um parágrafo que inicia uma seção no mesmo artigo:
+\cwmain{O primeiro parágrafo de uma seção também deve mostrar por que ela existe.}  A seguir mostro um parágrafo que inicia uma seção no mesmo artigo:
 
 \textquote{In this section we show that there is a low participation of female students in STEM courses, due to the multiple challenges they must face to participate in them. Furthermore, we show that this is considered a worldwide problem, and that there are many initiatives trying to solve it.}
 
 Lendo esse parágrafo o leitor não precisa mais ler o resto da seção, a não ser que queira detalhes. Tudo que a seção diz, em três subseções e cinco páginas está resumido aí.
 
-\subsection{A Técnica da Primeira Frase}
+\section{A primeira frase do parágrafo}
 
 \cwmain{A primeira frase do parágrafo deve apresentar a ideia que justifica sua existência.} Em geral, cada parágrafo de um artigo deve apresentar uma ideia, e uma ideia apenas . Para construir parágrafos fortes, essa ideia deve estar resumida na primeira frase. O resto do parágrafo deve explicá-la ou justificá-la.
 
-\cwmain{Dessa forma, o leitor que dá uma ``leitura diagonal'' pode ler apenas as primeiras frases e ter uma ideia bem clara do artigo.} Isso é uma enorme vantagem, pois muitos leitores fazem isso, logo aumenta o seu público.
+\cwmain{Dessa forma, o leitor que dá uma ``leitura diagonal'' pode ler apenas as primeiras frases e ter uma ideia bem clara do artigo.} Isso é uma enorme vantagem, pois muitos leitores pedem, em uma leitura rápida, entender o artigo. Além disso, você, como autor, pode ler o artigo rapidamente para entender se ele faz sentido.
 
-\section{Último Parágrafo da Seção}
+\chapter{Terminando com Conclusões}
+
+\section{O último parágrafo da seção}
 
 \cwmain{No último parágrafo da seção eu defendo um resumo da mesma, mesmo que pareça em conteúdo com o primeiro parágrafo.}  De certa forma, devemos garantir que o leitor não se perdeu ao longo da leitura e vai passar para a próxima parte do artigo com a ideia que queríamos consolidada.
 
@@ -189,7 +205,7 @@ Lendo esse parágrafo o leitor não precisa mais ler o resto da seção, a não 
 Existem, porém, exceções, por exemplo, se a seção é pequena, então pode não ser necessário. Mas se ela é pequena, por que existe?
 
 
-\section{O uso do tempo verbal}
+\chapter{O uso do tempo verbal}
 
 \cwmain{Os textos devem ser escritos no presente}, a menos de eventos que ocorreram no passado, ou que ocorrerão no futuro.
 
@@ -199,13 +215,11 @@ Existem, porém, exceções, por exemplo, se a seção é pequena, então pode n
 
 \cwmain{O uso do passado nas citações facilita construir uma linha de tempo das publicações}, e parece mais adequado. Por exemplo: ``Mary (1995) had initially proposed cheese and bread sandwiches, but later, in 2000, she introduced ham in them (Mary de Kooc, 2000)''. Esse texto, com tudo no presente, não ficaria muito bom.
 
+\cwmain{Todo o trabalho de sua autoria apresentado no artigo deve estar no presente}, a não ser que parte do texto seja uma narrativa, o que é raro na Computação. Estudos de caso, porém, podem cair nessa situação e ser descritos no passado.
 
+\chapter{Regras Simples para o Inglês}
 
-\cwmain{Todo o trabalho de sua autoria apresentado deve estar no presente}, a não ser que parte do texto seja uma narrativa, o que é raro na Computação. Estudos de caso, porém, podem cair nessa situação e ser descritos no passado.
-
-\section{Regras Simples}
-
-\subsection{Práticas Obrigatórias}
+\section{Práticas obrigatórias}
 
 Essas regras são, na verdade, gramaticais. Se você erra nesse nível, vai ter problemas sérios para ter o texto aceito para publicação.
 
@@ -257,7 +271,7 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
 \end{outline}
 
 
-\section{Diferenças Básicas no Inglês}
+\section{Diferenças básicas entre português e inglês}
 
 \begin{outline}
     \1 Começam com em letra minúscula no português mas em letra maíscula no inglês\xexeo{Alguma coisa importante está faltando?}:
@@ -300,7 +314,7 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
     \end{itemize}
 
 
-\section{Comentários sobre métodos de escrita}
+\chapter{Comentários sobre métodos de escrita}
 
 \subsection{O Método da Pirâmide de Barbara Minto}
 
@@ -308,7 +322,7 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
 
 \todo{fazer um resumo do método Minto}
 
-\section{Técnicas de Revisão}
+\section{Técnicas de revisão}
 
 \cwmain{A revisão do texto busca corrigi-lo ortográfica, gramática e estilisticamente}, de forma a estar correto conforme os padrões determinados pela revista ou congresso onde será publicado.
 
@@ -324,11 +338,14 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
 
 \cwmain{Não tenha medo de reescrever.} Muitos autores acham que o texto, ou parte do texto, ``já está pronto'' e não deve ser mexido. Na verdade, enquanto escrevemos entendemos melhor o que já escrevemos e podemos ter ideias de como melhorar o texto que não devemos deixar passar.
 
-\section{Software}
+\chapter{Software}
 \label{sec:software}
 Grammarly e LanguageTool.
 
-\section{Guia de Leitura}
+\chapter{Guia de Leitura}
+
+
+\backmatter
 
 \printbibliography
 
