@@ -10,3 +10,4 @@ main.synctex(busy)
 *.toc
 *.gz
 *.xml
+*.dvi

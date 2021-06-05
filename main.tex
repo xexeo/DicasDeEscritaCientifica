@@ -7,6 +7,7 @@ natbib]{biblatex}
 \usepackage{graphicx} % includegraphics
 \usepackage{csquotes} %enquote, textquote...
 \usepackage{enumitem} % noitemsep, nolistsep
+\usepackage[ruled,vlined,portuguese,linesnumbered]{algorithm2e}
 \usepackage{indentfirst }
 \setlist[itemize]{noitemsep}
 \setlist[itemize]{nolistsep}
@@ -58,12 +59,11 @@ As dicas aqui colocadas tem esse objetivo específico e, em geral, não são per
 
 \section{O que é estilo de escrita?}
 
-\cwmain{Um estilo de escrita é uma forma de expressar as ideias através de texto.} Um texto é composto de palavras ordenadas em uma sequência específica, e possui um significado. Se você se lembra do seu curso fundamental e médio sabe que existe a ortografia e a gramática, que falam das palavras e da estrutura do texto. Além disso, temos o significado, ou semântica. Também temos a pragmática, que analisa o texto dentro de um contexto. Mais além, temos um efeito da forma como as ideias são apresentadas, talvez fortemente estético, que agrada mais, ou menos, seus leitores, ou torna mais fácil, ou mais difícil, a leitura.
+\cwmain{Um estilo de escrita é uma forma de expressar as ideias através de texto.} Um texto é composto de palavras ordenadas em uma sequência específica, e possui um significado. Se você se lembra do seu curso fundamental e médio sabe que existe a ortografia e a gramática, que falam das palavras e da estrutura do texto. Além disso, temos o significado, ou semântica. Também temos a pragmática, que analisa o texto dentro de um contexto. Mais além, temos um efeito da forma como as ideias são apresentadas, como as palavras e estruturas são escolhidas, talvez fortemente estético, que agrada mais, ou menos, seus leitores, ou torna mais fácil, ou mais difícil, a leitura. Essa forma é o estilo.
 
-\cwmain{O estilo de escrita pode ser analisado de várias formas}, como em relação a um escritor, como o estilo de escrita de José Saramago, como em função de uma nacionalidade ou época, o estilo da poesia barroca, etc. Uma das formas é em função do objetivo geral do texto, como informar, descrever, etc., caracterizando um tipo de estilo. Na escrita científica, revistas e congressos também tem estilos próprios.
+\cwmain{O estilo de escrita pode ser analisado de várias formas}, como em relação a um escritor, como o estilo de escrita de José Saramago, como em função de uma nacionalidade ou época, o estilo da poesia barroca brasileira, etc. Uma das formas é em função do objetivo geral do texto, como informar, descrever, etc., caracterizando um tipo de estilo. Na escrita científica, existe um estilo geral, mas revistas e congressos também tem estilos próprios.
 
-\cwmain{Alguns tipos de estilo reconhecidos são o expositivo, o descritivo, o persuasivo e o narrativo}\citep{jeffrey:2016}.
-Como podem ver um mesmo texto pode possuir vários tipos de estilos.
+\cwmain{Alguns tipos de estilo reconhecidos são o expositivo, o descritivo, o persuasivo e o narrativo}\citep{jeffrey:2016}. Esses tipos de estilo possuem características próprias, sendo o expositivo o mais comum em artigos científicos. Porém, pelos nomes, é possivel ver que um mesmo texto pode apresentar mais de um desses estilos. A conclusão de um artigo, por exemplo, pode ser mais persuasiva.
 
 \cwmain{Para escolher um estilo de escrita é necessário conhecer o seu objetivo e quem são os seus leitores.} A audiência tem expectativas que devem ser atendidas, e, quando quebradas, podem deixar o leitor desconcertado e evitar que eles leiam seu artigo.
 
@@ -100,7 +100,7 @@ Bons autores tem estilo próprio que quebram algumas regras, ou mesmo todas, por
 \cwmain{Como podemos ver pelos exemplos anteriores, a mesma ideia pode ser passada, corretamente, por vários textos.} Do mesmo modo, o mesmo texto pode gerar várias ideias.
 
 \cwmain{A frase ``Vi um homem de binóculo'' mostra como um texto pode ser lido de várias formas.}
-Ela permite duas interpretações: eu estava usando um binóculo, ou o homem portava um binóculo. Ela pode ser reescrita de outras formas para evitar essa ambiguidade, por exemplo: \enquote{De binóculo, vi um homem}, \enquote{Eu usava um binóculo quando vi um homem a distância}. Todas essas frases estão corretas, mas a original é totalmente ambígua\footnote{A amiguidade, nesse caso, é gramatical, já que duas estruturas gramaticais podem ser construídas}, não nos permite afirmar, com certeza, se quem estava de binóculo era eu, ou o homem. A segunda, dependendo de onde é usada, poderia ainda dizer que quem estava usando o binóculo era o homem, por exemplo se respondendo a questão ``Você viu alguém com binóculo ou chapéu?''.
+Ela permite duas interpretações: eu estava usando um binóculo, ou o homem portava um binóculo. Ela pode ser reescrita de outras formas para evitar essa ambiguidade, por exemplo: \enquote{De binóculo, vi um homem}, \enquote{Eu usava um binóculo quando vi um homem a distância}. Todas essas frases estão corretas, mas a original é totalmente ambígua\footnote{A ambiguidade, nesse caso, é gramatical, já que duas estruturas gramaticais podem ser construídas}, não nos permite afirmar, com certeza, se quem estava de binóculo era eu, ou o homem. A segunda, dependendo de onde é usada, poderia ainda dizer que quem estava usando o binóculo era o homem, por exemplo se respondendo a questão ``Você viu alguém com binóculo ou chapéu?''.
 Na terceira tudo está mais claro e é difícil escolher um contexto onde não represente exatamente o fato de que eu estava de binóculo e não o homem.
 
 % need to protect references in a box to allow
@@ -164,7 +164,7 @@ It also shows how to build courses based on heroic journeys, taking into account
 
 Porém, algumas vezes, o estilo é ditado fortemente pela revista ou pela área de atuação, por exemplo, esse texto segue uma abordagem totalmente diferente.
 
-\textquote{Let $G = (V,E)$ be a simple undirected graph, with a set of vertices $V$ and a set of edges $E$. Denote by $E(C) \subset E$, $C \subset V$, the edges of $G$ with both endpoints in $C$ and by $G(C) = (C,E(C))$ the subgraph in $G$ induced by $C$. If $G(C)$ is complete, $C$ is called a clique. An \textit{Edge Clique Cover} (ECC) of $G$, in turn, is defined as a set of cliques ${C_1,...,C_k}$, $k \geq 1$, for which $E = \bigcup_{i=1,..,k}E(C_i)$ applies, i.e., a set of cliques for which their induced edges \textit{cover} (contain) all edges in $E$. The smallest cardinality possible for such a set, $\kappa$, is called the ECC number of $G$ and the ECCP is to find an ECC with cardinality exactly $\kappa$.}\footnote{Texto gentilmente cedido pelo Douglas}
+\textquote{Let $G = (V,E)$ be a simple undirected graph, with a set of vertices $V$ and a set of edges $E$. Denote by $E(C) \subset E$, $C \subset V$, the edges of $G$ with both endpoints in $C$ and by $G(C) = (C,E(C))$ the subgraph in $G$ induced by $C$. If $G(C)$ is complete, $C$ is called a clique. An \textit{Edge Clique Cover} (ECC) of $G$, in turn, is defined as a set of cliques ${C_1,\ldots,C_k}$, $k \geq 1$, for which $E = \bigcup_{i=1,\ldots,k}E(C_i)$ applies, i.e., a set of cliques for which their induced edges \textit{cover} (contain) all edges in $E$. The smallest cardinality possible for such a set, $\kappa$, is called the ECC number of $G$ and the ECCP is to find an ECC with cardinality exactly $\kappa$.}\footnote{Texto gentilmente cedido pelo Douglas}
 
 E, como um exemplo que considero um contra-exemplo do que um bom primeiro parágrafo, um artigo que apresentei com outros autores apresenta o seguinte texto como primeiro parágrafo:
 
@@ -216,6 +216,139 @@ Existem, porém, exceções, por exemplo, se a seção é pequena, então pode n
 \cwmain{O uso do passado nas citações facilita construir uma linha de tempo das publicações}, e parece mais adequado. Por exemplo: ``Mary (1995) had initially proposed cheese and bread sandwiches, but later, in 2000, she introduced ham in them (Mary de Kooc, 2000)''. Esse texto, com tudo no presente, não ficaria muito bom.
 
 \cwmain{Todo o trabalho de sua autoria apresentado no artigo deve estar no presente}, a não ser que parte do texto seja uma narrativa, o que é raro na Computação. Estudos de caso, porém, podem cair nessa situação e ser descritos no passado.
+
+\chapter{O Processo de Publicação}
+
+\cwmain{O processo de publicação de um artigo para revista possui inicialmente seis passos básicos: aceitação inicial pelo editor, busca de revisores, análise dos revisores, divulgação do resultado pelo editor, correções pelo autor, aceitação final}. Possivelmente o resultado exigirá uma alteração do texto pelos autores, o que leverá o artigo a voltar a fase de análise dos revisores. Em congressos, raramente isso acontece, sendo o primeiro resultado normalmente final.
+
+\cwmain{Mesmo após um resultado positivo de aceitação, tanto em congresso quanto em revistas, é normalmente necessário fazer pequenas correções para ter o artigo publicado}. Assim, o processo de publicação pode ser representado de forma geral em um Diagrama de Atividades UML 2.5, como o da Figura \ref{fig:processo}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{imagens/ProcessoDeSubmissao.png}
+    \caption[Processo genérico de submissão e aceitação de um artigo científico]{Processo genérico de submissão e aceitação de um artigo científico. (imagem do autor)}
+    \label{fig:processo}
+\end{figure}
+
+\cwmain{O artigo, durante o processo, passa por alguns estados,} que podem ser representados por um Diagrama  de Estados UML 2.5 como o da Figura \ref{fig:maquina}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{imagens/MaquinaEstadoArtigo.png}
+    \caption[Visão genérica dos estados de um artigo científico]{Visão genérica dos estados de um artigo científico submetido ao processo de revisão de uma revista. (imagem do autor)}
+    \label{fig:maquina}
+\end{figure}
+
+\cwmain{Algumas vezes os editores não aceitam o artigo por acharam que não está no escopo da revista}. Isso indica, por um lado, que os autores não fizeram o dever de casa corretamente ao escolher a revista. Por outro lado, o editor pode sugerir revistas mais adequadas, pela especialização, pelo estilo do texto, ou por outro motivo.
+
+
+\cwmain{Existe a possibilidade do artigo não ser aceito porque não foram achados revisores.} Isso já aconteceu comigo com o mesmo artigo em duas revistas, porque misturamos assuntos demais em uma tese de doutorado. Nesse caso, solução foi buscar uma reescrita que aborde apenas um subconjunto dos assuntos. Em geral, é possível pesquisar melhor por uma revista mais adequada.
+
+\cwmain{Processos de submissão podem se transformar em ciclos razoavelmente longos.} Isso acontece tanto porque os passos são muito longos no tempo, provavelmente devido ao atraso dos revisores, quanto porque o ciclo de revisão e correção pode acontecer mais de uma vez.
+
+\cwmain{As revisões geralmente são classificadas em \textit{minor revision} ou \textit{major revision}}. Como o nome indica, uma \textit{major revision} indica que o trabalho de correção do artigo será grande, muitas vezes envolvendo o próprio experimento. Já uma \textit{minor revision} normalmente indica pequenos problemas de escrita.
+
+\cwmain{Uma \textit{minor revision} é praticamente uma aceitação.} Os autores devem considerar isso um ótimo sinal sobre o artigo. O muito importante não perder uma chance de publicação indicada por uma \textit{minor revision}, e isto pode acontecer principalmente por causa do prazo que foi dado.
+
+\cwmain{Uma \textit{major revision} indica que o artigo tem alguma substância, mas ainda não atingiu o padrão da revista.} Normalmente o trabalho de uma \textit{major revision} vale a pena, mas alguns autores desistem, principalmente quando são necessárias muitas mudanças significativas na parte experimental ou o prazo para as correções é muito curto. É possível que procurem outra revista, mesmo que façam algumas das correções.
+
+\cwmain{Raramente um artigo é aceito em sua primeira versão.} Eu diria que a probabilidade é equivalente a de um \textit{hole in one} no golfe.
+
+\cwmain{É comum que um artigo recusado seja corrigido,  a partir dos comentários dos revisores, e submetido a outra revista}. Isso é o fluxo normal de muitos artigos, que vão sendo melhorados até serem aceitos, ou são submetidos a revistas ou congressos com chances maiores de aceitação, ou mais adequados aos tópicos de artigos.
+
+\cwmain{É importante não se sentir desanimado com uma recusa}. O processo de revisão por pares é um processo de aprendizado e raramente a crítica é errada.
+
+
+\cwmain{É possível que o resultado final seja \textit{Revise and Resubmit}}. Isso é mais parecido com uma recusa, porém o editor acha que o artigo, se corrigido, normalmente de forma drástica, cabe na revista, porém todo o processo vai ser refeito do início. Essa resposta não está retratada nas figuras por ser basicamente uma recusa educada.
+
+\section{O que analisam os revisores}
+
+\cwmain{Em cada conferência ou publicação os revisores são solicitados a analisar algumas características no artigos.} Essa análise é feita na forma de notas, como um valor entre um a 10, ou na forma de escolha entre uma lista de opções, como ``totalmente original'' e ``não apresenta nenhuma ideia nova''.
+
+
+\cwmain{Um fator que está sempre presente é a originalidade do artigo.} A originalidade, em geral, pode variar entre algo nunca antes pensado até um resultado conhecido e trivial que foi simplesmente repetido. Devemos pensar a originalidade como uma linha contínua. Um ponto dessa linha pode ser ``Aplicar um algoritmo conhecido em um novo problema'', e outro, de melhor qualidade pode ser ``Melhorar o estado da arte de solução de um problema por meio da modificação de um algoritmo existente''. Certamente criar algoritmos que melhoram o estado da arte e provar teoremas em aberto há algum tempo estão entre as propostas mais fortes.
+
+\cwmain{A clareza e correção do do texto também são quesitos sempre presentes}.
+
+\cwmain{Outro fator muito comum é a exigência de uma base teórica sólida.}
+
+\cwmain{Normalmente também cabe ao revisor julgar se o artigo é apropriado para a conferência ou revista.} Mesmo que o editar já tenha feito um primeiro filtro.
+
+
+
+
+
+
+\section{Escolha da revista}
+
+\cwmain{A escolha da revista ou conferência pode ser feito de forma mais ou menos estratégica.}
+
+Nessa escolha podem ser analisados, entre outros fatores:
+\begin{itemize}
+    \item a adequação ao tema e originalidade do artigo;
+    \item a qualidade da publicação;
+    \item o estilo dos artigos na revista;
+    \item o tempo de resposta médio de revisão e aceitação;
+    \item a quantidade de artigos aceitos em relação aos submetidos;
+    \item a quantidade de artigos publicados por ano e por exemplar, e
+    \item a experiência dos autores com a revista ou conferência.
+\end{itemize}
+
+\cwmain{Devemos publicar na revista ou congresso mais adequados ao tema do artigo.} Existem algumas complicadores para isso. Em áreas novas de pesquisa, pode ser que nenhuma publicação específica tenha uma reputação que atenda a próxima questão, a qualidade da publicação. Também é possível que as revistas que parecem mais adequadas possuam processos muito longos, algumas possuem processos de mais de um ano, que não atendem a necessidade de um dos autores. Na COPPE, por exemplo, é preciso publicar em uma revista indexada para defender a tese de doutorado, mas claramente o candidato ao doutorado não pode se arriscar a esperar anos pela aceitação.
+
+\cwmain{A qualidade da publicação depende de vários fatores.} Existem fatores subjetivos, como a reputação da revista na comunidade, e fatores objetivos, como índices bibliométricos, como o índice JCR ou o índice H. Algumas áreas, que possuem menos pesquisadores ou são bem específicas, por exemplo, tem indicadores objetivos bem baixos, porém as suas revistas tem grande reputação. Nessa questão, os orientadores podem ajudar muito os alunos autores.
+
+\cwmain{Quanto ao estilo, algumas revistas exigem uma abordagem muito formal, enquanto outras aceitam uma linguagem mais informal.}. Por exemplo, para alguns autores é difícil reescrever um trabalho que foi feito de forma mais prática, com algoritmos e programas, na forma de equações matemáticas. Isso pode evitar que um artigo seja adequado a um grupo de revistas que são fortemente baseadas em matemática. Por exemplo, o texto, a fórmula e o algoritmo a seguir apresentam dois estilos de dizer  a mesma coisa.
+
+A média aritmética de um conjunto de valores é a soma dos valores dividida pela quantidade de valores.
+
+% TIL: \limits faz os limites inferior e superior
+% ficarem abaixo e acima do símbolo de somatório.
+\begin{equation}
+    \bar{x} = \frac{\sum\limits_{i=1}^{N}x_i}{N}
+\end{equation}
+
+\begin{algorithm}
+    \KwIn{$X=\{x_i | 1<i\leq N\}$}
+    $S \leftarrow 0$ \;
+    $K \leftarrow |X|$ \;
+    \While{$|X|>0$}{
+        $S \leftarrow S + x_1$\;
+        $X \leftarrow X - \{x_1\}$\;
+    }
+    \Return{$S/K$}
+\caption{Média Aritmética}
+\end{algorithm}
+
+
+\cwmain{Os índices objetivos das revistas ajudam a tomar decisões práticas.} Nem toda revista oferece esses dados, mas as que oferecem permitem que os autores analisem se é prático publicar nas mesmas. Uma revista com um processo muito lento é inadequada para quem tem prazo ou pressa. Porém, a qualidade da publicação deve ser sempre levada em conta. Esperar mais um pouco por uma publicação bem melhor pode causar uma grande modificação no impacto do artigo na área.
+
+
+\subsection{Revisões claramente mal feitas}
+
+
+\cwmain{Não é raro que uma revisão seja mal feita}. Principalmente em congressos, onde os dados mostram que há pouca concordância entre os revisores\favorcitar.
+
+\cwmain{Alguns casos que eu conheço de revisões mal feitas}:
+\begin{itemize}
+    \item Um artigo foi recusado em uma trilha de uma conferência porque um revisor considerou que a trilha, de \textit{design}, era restrita a arte de jogos, e não incluia o \textit{game design};
+    \item Um revisor afirmou que ``o autor não poderia ter um trabalho dessa qualidade sem nunca ter publicado na área, logo devia ser mentira''.  Essa resposta já foi vista duas vezes, em um congresso e em uma revista, por autores diferentes. No caso da revista o autor recorreu ao editor e teve o artigo publicado.
+    \item Revisores que apresentaram revisões (de recusa) de outros artigos. Isso também já aconteceu mais de uma vez, infelizmente em conferências onde não era possível revisar o resultado. É culpa não só do revisor, mas também do responsável pelas revisões.
+\end{itemize}
+
+\cwmain{Se a revisão mal feita é para uma revista, não exite em contatar o editor.} Ele pode realmente tomar alguma atitude. Se é para um congresso, provavelmente não haverá muita chance de reclamar, mas é importante avisar o editor para que ele evite problemas no futuro. Provalvemente artigo poderá ser facilmente aproveitado em outro congresso ou revista.
+
+\subsection{A correção}
+
+\cwmain{Acompanhando a correção, os autores devem enviar um documento explicando como cada pedido dos revisores foi, ou não, atendido}. Esse documento é importantíssimo para os revisores entenderem o que foi feito, e é também uma prova de que o processo de correção foi bem feito pelos autores.
+
+\cwmain{Esta carta é mais importante se for uma \textit{major revision}}. Os itens devem ser tratados em ordem de importância, do mais importante para o menos importante, já que elas provavelmente terão uma impacto maior no artigo.
+
+\cwmain{Tipicamente esse documento é uma lista dos pedidos feitos, onde cada item é seguido da explicação da correção feita.} Essa explicação pode ser pequena ou grande, dependendo realmente do que foi feito.
+
+\cwmain{É importante que essa lista tenha um formato muito legível.} Afinal, o objetivo é ajudar os revisores a entender a sua correção, e não criar mais confusão.  Quando for razoável, é bom mostrar a versão anterior e a nova versão.
+
 
 \chapter{Regras Simples para o Inglês}
 
@@ -294,6 +427,7 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
     \item \textit{Application} $\rightarrow$ inscrição.
     \item \textit{Attend} $\rightarrow$ participar.
     \item \textit{College} $\rightarrow$ faculdade, mas quando é parte de um nome às vezes a tradução é colégio mesmo.
+    \item \textit{Congress} $\rightarrow$ deve ser reservado para o uso político, \textit{Conference} é um termo genérico mais adequado para eventos científicos.
     \item \textit{Costume} $\rightarrow$ fantasia.
     \item \textit{Data} $\rightarrow$ dados, uma data é \textit{date}.
     \item \textit{Eventually} $\rightarrow$ finalmente, e que sempre acontece. Eventualmente é \textit{occasionally}.
@@ -316,7 +450,7 @@ Se estivermos em dúvida sobre algumas dessas, como se não sabemos qual o tempo
 
 \chapter{Comentários sobre métodos de escrita}
 
-\subsection{O Método da Pirâmide de Barbara Minto}
+\section{O Método da Pirâmide de Barbara Minto}
 
 \citet{minto2009pyramid} propõe um método baseado na ideia de uma pirâmide.
 
