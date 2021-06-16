@@ -120,12 +120,20 @@
     \message{Babel not detected!}%
 }%
 \ifednotebookmarks\RequirePackage{hyperref}\fi
+\@ifclassloaded{abntex2}%
+{% TRUE
+\newif\if@abntex\@abntextrue%
+}%
+{%
+\newif\if@abntex\@abntexfalse%
+}%
 \newcommand{\cor@prof}{red}%
 \newcommand{\cor@cand}{blue}%
 \newcommand{\cor@subject}{green}%
 \newcommand{\cor@main}{yellow}%
 \newcommand{\cor@citar}{purple}%
 \newcommand{\cor@hldraft}{yellow}%
+\newcommand{\cw@cftnumwidth}{20pt}
 \def\cwdrafttitle{Standard Draft}%
 \def\cwcommentstitle{Standard List of Comments}%
 \def\cwsubjtitle{Standard List of Subjects}%
@@ -269,9 +277,13 @@
 \if@showsubjects
 \newcommand{\listsubject}{\cwsubjtitle}%
 %% cria a lista, depende do pacoto tcloft
-\@ifundefined{chapter}
-{\newlistof[section]{subject}{aaa}{\listsubject}}
+\if@abntex%
+\newlistof{subject}{aaa}{\listsubject}
+\else%
+\@ifundefined{chapter}%
+{\newlistof[section]{subject}{aaa}{\listsubject}}%
 {\newlistof[chapter]{subject}{aaa}{\listsubject}}%
+\fi%
 \newcommand{\cwsubject}[2][\cor@subject]{%
 \refstepcounter{subject}%
 \sethlcolor{#1}%
@@ -286,6 +298,7 @@
     \cwmainemphasis{#2}%
     \addcontentsline{aaa}{subject}{\protect\numberline{\thesubject}{#2}}%
 }%
+\setlength{\cftsubjectnumwidth}{\cw@cftnumwidth}%
 \else%
 \newcommand{\listofsubject}{}%
 \newcommand{\cwsubject}[2][]{}%
@@ -295,9 +308,13 @@
 %% Resolve a lista de comentários
 \newcommand{\listcomentario}{\cwcommentstitle}%
 %% cria a lista
+\if@abntex%
+\newlistof{comentario}{ccc}{\listcomentario}%
+\else%
 \@ifundefined{chapter}
 {\newlistof[section]{comentario}{ccc}{\listcomentario}}
 {\newlistof[chapter]{comentario}{ccc}{\listcomentario}}%%
+\fi%
 %%
 %% Comentador genérico - parte I
 %% faz o cwnote e soma na lista
@@ -344,7 +361,7 @@
 \cw@comentar[#5]{\sout{#2}}{#3}{#4}%
 }%
 %%
-\setlength{\cftcomentarionumwidth}{2.5em}
+\setlength{\cftcomentarionumwidth}{\cw@cftnumwidth}
 \else
 \newcommand{\cw@comentar}[4][]{}%
 \newcommand{\listofcomentario}{}%
@@ -376,7 +393,13 @@
 \fi%
 \if@showcomentario%
 \newcommand{\listcomentarioref}{\cwcitationstitle}%
-\@ifundefined{chapter}{ \newlistof[section]{comentarioref}{ccr}{\listcomentarioref}}{\newlistof[chapter]{comentarioref}{ccr}{\listcomentarioref}}%
+\if@abntex%
+\newlistof{comentarioref}{ccr}{\listcomentarioref}
+\else%
+\@ifundefined{chapter}%
+{\newlistof[section]{comentarioref}{ccr}{\listcomentarioref}}
+{\newlistof[chapter]{comentarioref}{ccr}{\listcomentarioref}}%
+\fi%
 \else%
 \newcommand{\listofcomentarioref}{}%
 \fi%
@@ -387,7 +410,7 @@
 \cw@cwnote{#2}{#3}{\cwpleasecitemarginnote}%
 \addcontentsline{ccr}{comentarioref}{\protect\numberline{\thecomentarioref}{#2}}%
 }%
-\setlength{\cftcomentariorefnumwidth}{2.5em}%
+\setlength{\cftcomentariorefnumwidth}{\cw@cftnumwidth}%
 \else%
 \newcommand{\cw@commentref}[3]{}%
 \fi%
